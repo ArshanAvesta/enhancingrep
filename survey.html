@@ -147,6 +147,44 @@
       </div>
 
       <!-- Q1 -->
+        <!-- Editable Demographics Table -->
+        <div class="section">
+          <h2>Patient Demographics at Your Clinical Site</h2>
+          <p>Please enter the approximate percentage distribution of the following demographic groups for patients at your clinical site:</p>
+          <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th>Demographic Group</th>
+                <th>Percentage (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>White</td>
+                <td><input type="number" name="site_demographics[white]" min="0" max="100" placeholder="e.g., 40" /></td>
+              </tr>
+              <tr>
+                <td>African American</td>
+                <td><input type="number" name="site_demographics[african_american]" min="0" max="100" placeholder="e.g., 20" /></td>
+              </tr>
+              <tr>
+                <td>Asian</td>
+                <td><input type="number" name="site_demographics[asian]" min="0" max="100" placeholder="e.g., 15" /></td>
+              </tr>
+              <tr>
+                <td>Hispanic</td>
+                <td><input type="number" name="site_demographics[hispanic]" min="0" max="100" placeholder="e.g., 25" /></td>
+              </tr>
+              <tr>
+                <td>Other (please specify below)</td>
+                <td>
+                  <input type="number" name="site_demographics[other_percent]" min="0" max="100" placeholder="e.g., 5" /><br/>
+                  <input type="text" name="site_demographics[other_specify]" placeholder="Specify other group(s)" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       <div class="section">
         <h2>1) Patient Population</h2>
         <label>What is the demographic makeup of your site’s typical patient population? <span class="help">(Select all that apply)</span></label>
