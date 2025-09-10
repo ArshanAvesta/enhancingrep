@@ -108,18 +108,24 @@
     width: 18px; height: 18px; margin-top: 2px;
     accent-color: var(--brand);
   }
+
+  /* matrix table */
+  table.matrix { width: 100%; border-collapse: collapse; }
+  table.matrix th, table.matrix td { border: 1px solid rgba(0,0,0,0.15); padding: 10px; text-align: center; }
+  table.matrix th:first-child, table.matrix td:first-child { text-align: left; }
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="header">
       <h1>Understanding Barriers to Clinical Trial Participation</h1>
-      <p>Thank you for participating in this survey! We greatly appreciate your site's participation in supporting our mission in enhancing representation in clinical trials. Your insights will help shape future strategies to ensure more equitable access and representation. The survey is confidential and should take approximately 10 minutes to complete. </p>
+      <p>Thank you for participating in this survey. Your insights will help shape strategies to ensure equitable access and representation in AFib trials. The survey is confidential and should take about 10 minutes.</p>
     </div>
 
     <form id="siteSurvey" action="https://formspree.io/f/myzdlrrj" method="POST" novalidate>
       <input type="hidden" name="_subject" value="New Clinical Site Survey" />
-      <!-- Contact / Site Info -->
+
+      <!-- Contact & Site Information -->
       <div class="section">
         <h2>Contact & Site Information</h2>
         <div class="grid">
@@ -150,492 +156,288 @@
         </div>
       </div>
 
-      <!-- Q1: Demographics Measurement -->
+      <!-- About Your Clinical Site -->
       <div class="section">
-        <h2>1) Demographic Measurement at Your Clinical Site</h2>
-        <label>Has your clinical site measured the demographic racial/ethnic distribution of your clinical trial site participants?</label>
-        <div class="choice-group" data-toggle="q1">
-          <label class="choice"><input type="radio" name="q1_measured" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q1_measured" value="no" /> <span>No</span></label>
-        </div>
-        <div id="q1_yes" class="followup hidden">
-          <p>Please enter the approximate percentage distribution of the following demographic groups for participants at your clinical site:</p>
-          <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
-            <thead>
-              <tr>
-                <th>Demographic Group</th>
-                <th>Percentage (%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>White</td>
-                <td><input type="number" name="site_demographics[white]" min="0" max="100" placeholder="e.g., 40" /></td>
-              </tr>
-              <tr>
-                <td>African American</td>
-                <td><input type="number" name="site_demographics[african_american]" min="0" max="100" placeholder="e.g., 20" /></td>
-              </tr>
-              <tr>
-                <td>Asian</td>
-                <td><input type="number" name="site_demographics[asian]" min="0" max="100" placeholder="e.g., 15" /></td>
-              </tr>
-              <tr>
-                <td>Hispanic</td>
-                <td><input type="number" name="site_demographics[hispanic]" min="0" max="100" placeholder="e.g., 25" /></td>
-              </tr>
-              <tr>
-                <td>
-                  Other<br/>
-                  <input type="text" name="site_demographics[other_specify]" placeholder="Specify other group(s)" style="margin-top:4px; width:90%;" />
-                </td>
-                <td>
-                  <input type="number" name="site_demographics[other_percent]" min="0" max="100" placeholder="e.g., 5" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h2>About Your Clinical Site</h2>
+        <label for="siteState">Please select the state that your clinical site is located in</label>
+        <select id="siteState" name="site_state">
+          <option value="">-- Select a state --</option>
+          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
+          <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
+          <option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
+          <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option>
+          <option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+          <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option>
+          <option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option>
+          <option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+          <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+          <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+        </select>
       </div>
 
-      <!-- Q2 -->
+      <!-- Patient Population & Demographics -->
       <div class="section">
-        <h2>2) Patient Population</h2>
-        <label>What is the demographic makeup of your site’s typical patient population? <span class="help">(Select all that apply)</span></label>
+        <h2>Patient Population & Demographics</h2>
+        <label>Please describe your site’s typical patient population. <span class="help">(Select all that apply)</span></label>
         <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q2_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity</span></label>
-          <label class="choice"><input type="checkbox" name="q2_population[]" value="diverse_multiple_groups" /> <span>Diverse with multiple racial and ethnic groups</span></label>
-          <label class="choice"><input type="checkbox" name="q2_population[]" value="primarily_one_age_group" /> <span>Primarily one age group</span></label>
-          <label class="choice"><input type="checkbox" name="q2_population[]" value="specific_ses" /> <span>Mostly from a specific socioeconomic background</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="diverse_multiple_groups" /> <span>Diverse with multiple racial and ethnic groups</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_men" /> <span>Mostly men</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_women" /> <span>Mostly women</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_older" /> <span>Mostly older patients (&gt;50 years old)</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_younger" /> <span>Mostly younger patients (&lt;50 years old)</span></label>
+          <div>
+            <label for="q3_other">Other (please specify):</label>
+            <input id="q3_other" type="text" name="q3_other" />
+          </div>
         </div>
       </div>
 
-      <!-- Q3 -->
+      <!-- Patient Population Language Needs -->
       <div class="section">
-        <h2>3) Recruitment & Retention Plan</h2>
-        <label>Does your site have a recruitment and retention plan in place?</label>
-        <div class="choice-group" data-toggle="q3">
-          <label class="choice"><input type="radio" name="q3_plan" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q3_plan" value="no" /> <span>No</span></label>
+        <h2>Patient Population Language Needs</h2>
+        <label>Does your site serve non-English-speaking patients?</label>
+        <div class="choice-group" data-toggle="q_lang">
+          <label class="choice"><input type="radio" name="q_lang_serve" value="yes" required /> <span>Yes</span></label>
+          <label class="choice"><input type="radio" name="q_lang_serve" value="no" /> <span>No</span></label>
         </div>
 
-        <div id="q3_yes" class="followup hidden">
-          <label>If yes, which elements are included? <span class="help">(Select all that apply)</span></label>
+        <div id="q_lang_yes" class="followup hidden">
+          <h3 style="margin:0 0 10px">2) Support for Non-English-Speaking Patients</h3>
+          <label>If yes, what resources are available? <span class="help">(Select all that apply)</span></label>
           <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q3_elements[]" value="community_outreach" /> <span>Community outreach initiatives</span></label>
-            <label class="choice"><input type="checkbox" name="q3_elements[]" value="advocacy_partnerships" /> <span>Partnerships with advocacy groups</span></label>
-            <label class="choice"><input type="checkbox" name="q3_elements[]" value="translation_services" /> <span>Translation/interpretation services</span></label>
-            <label class="choice"><input type="checkbox" name="q3_elements[]" value="flexible_scheduling" /> <span>Flexible scheduling or visit options</span></label>
-            <label class="choice"><input type="checkbox" name="q3_elements[]" value="incentives_comp" /> <span>Incentives/compensation plans</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="bilingual_staff" /> <span>Bilingual staff</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="bilingual_physicians" /> <span>Bilingual physicians</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="on_call_interpreters" /> <span>On-call interpreters</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="translated_materials" /> <span>Translated written materials</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="consent_other_languages" /> <span>Consent forms in other languages</span></label>
+            <label class="choice"><input type="checkbox" name="q_lang_support[]" value="no_specific_resources" /> <span>No specific resources</span></label>
             <div>
-              <label for="q3_other">Other (please specify):</label>
-              <input id="q3_other" type="text" name="q3_other" />
+              <label for="q_lang_other">Other (please specify):</label>
+              <input id="q_lang_other" type="text" name="q_lang_other" />
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Q4 -->
+      <!-- AFib Patients & Ablation Trial Participation -->
       <div class="section">
-        <h2>4) Plan Adaptation</h2>
-        <label>Does this plan change based on demographics, disease groups, or protocol requirements?</label>
-        <div class="choice-group" data-toggle="q4">
-          <label class="choice"><input type="radio" name="q4_change" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q4_change" value="no" /> <span>No</span></label>
-        </div>
+        <h2>AFib Patients &amp; Ablation Trial Participation</h2>
 
-        <div id="q4_yes" class="followup hidden">
-          <label>If yes, how does it change? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q4_how[]" value="tailored_outreach" /> <span>Tailored outreach to specific racial/ethnic groups</span></label>
-            <label class="choice"><input type="checkbox" name="q4_how[]" value="criteria_emphasis" /> <span>Adjusted inclusion/exclusion criteria emphasis</span></label>
-            <label class="choice"><input type="checkbox" name="q4_how[]" value="modified_materials" /> <span>Modified consent or educational materials</span></label>
-            <label class="choice"><input type="checkbox" name="q4_how[]" value="different_sites" /> <span>Different recruitment sites/locations</span></label>
-            <div>
-              <label for="q4_other">Other (please specify):</label>
-              <input id="q4_other" type="text" name="q4_other" />
-            </div>
+        <!-- 4) Barriers to Enrollment -->
+        <h3>Barriers to Enrollment</h3>
+        <label>Which barriers most affect participation in AFib ablation trials at your site? <span class="help">(Select all that apply)</span></label>
+        <div class="choice-group">
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="transportation" /> <span>Transportation</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="caregiver_support" /> <span>Caregiver/childcare or patient care support</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="trial_burden" /> <span>Visit frequency/trial burden</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="language_barriers" /> <span>Language barriers</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="cultural_factors" /> <span>Cultural factors</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="health_literacy" /> <span>Health literacy</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="not_interested" /> <span>Not interested in clinical trials</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="competing_trials" /> <span>Competing catheter trials (patients can only enroll in one)</span></label>
+          <label class="choice"><input type="checkbox" name="q4_barriers[]" value="unable_meet_inclusion" /> <span>Unable to meet inclusion criteria</span></label>
+          <div>
+            <label for="q4_other">Other (please specify):</label>
+            <input id="q4_other" type="text" name="q4_other" />
           </div>
         </div>
-      </div>
 
-      <!-- Q5 -->
-      <div class="section">
-        <h2>5) Incentives / Compensation</h2>
-        <label>What incentives, compensation, or reimbursement options does your site use? <span class="help">(Select all that apply)</span></label>
+        <!-- 5) Observed Differences in Participation -->
+        <h3>Observed Differences in Participation</h3>
+        <label>Which of the following differences have you observed in AFib diagnosis, referral, or trial participation at your site? <span class="help">(Select all that apply)</span></label>
         <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q5_incentives[]" value="travel_reimbursement" /> <span>Travel reimbursement</span></label>
-          <label class="choice"><input type="checkbox" name="q5_incentives[]" value="caregiver_support" /> <span>Childcare or caregiver support</span></label>
-          <label class="choice"><input type="checkbox" name="q5_incentives[]" value="gift_cards" /> <span>Gift cards or stipends</span></label>
-          <label class="choice"><input type="checkbox" name="q5_incentives[]" value="free_tests" /> <span>Free medical tests or procedures</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="lack_minority" /> <span>Lack of minority patients enrolled</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="mostly_men" /> <span>Mostly men participating</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="mostly_women" /> <span>Mostly women participating</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="mostly_older" /> <span>Mostly older patients enrolled</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="mostly_younger" /> <span>Mostly younger patients enrolled</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="lack_hispanic" /> <span>Lack of Hispanic patients enrolled</span></label>
+          <label class="choice"><input type="checkbox" name="q5_diffs[]" value="insurance_coverage" /> <span>Insurance/coverage differences</span></label>
           <div>
             <label for="q5_other">Other (please specify):</label>
             <input id="q5_other" type="text" name="q5_other" />
           </div>
         </div>
-      </div>
 
-      <!-- Q6 -->
-      <div class="section">
-        <h2>6) Resources for Non-English Speakers</h2>
-        <label>What resources are available for non-English-speaking patients? <span class="help">(Select all that apply)</span></label>
-        <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q6_resources[]" value="bilingual_staff" /> <span>Bilingual staff</span></label>
-          <label class="choice"><input type="checkbox" name="q6_resources[]" value="on_call_interpreters" /> <span>On-call interpreters</span></label>
-          <label class="choice"><input type="checkbox" name="q6_resources[]" value="translated_materials" /> <span>Translated written materials</span></label>
-          <label class="choice"><input type="checkbox" name="q6_resources[]" value="consent_other_languages" /> <span>Consent forms in other languages</span></label>
-          <label class="choice"><input type="checkbox" name="q6_resources[]" value="no_specific_resources" /> <span>No specific resources</span></label>
-          <div>
-            <label for="q6_other">Other (please specify):</label>
-            <input id="q6_other" type="text" name="q6_other" />
-          </div>
-        </div>
-      </div>
+        <!-- 6) Patient Concerns (matrix) -->
+        <h3>Patient Concerns</h3>
+        <label>How often do patients at your site express the following concerns about AFib ablation trials?</label>
+        <table class="matrix" aria-label="Patient Concerns Matrix">
+          <thead>
+            <tr>
+              <th>Concern</th>
+              <th>Very Often</th>
+              <th>Often</th>
+              <th>Sometimes</th>
+              <th>Not Often</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Effectiveness of ablation compared to medication</td>
+              <td><input type="radio" name="q6_effectiveness" value="very_often" required></td>
+              <td><input type="radio" name="q6_effectiveness" value="often"></td>
+              <td><input type="radio" name="q6_effectiveness" value="sometimes"></td>
+              <td><input type="radio" name="q6_effectiveness" value="not_often"></td>
+            </tr>
+            <tr>
+              <td>Concerns about procedure invasiveness</td>
+              <td><input type="radio" name="q6_invasiveness" value="very_often" required></td>
+              <td><input type="radio" name="q6_invasiveness" value="often"></td>
+              <td><input type="radio" name="q6_invasiveness" value="sometimes"></td>
+              <td><input type="radio" name="q6_invasiveness" value="not_often"></td>
+            </tr>
+            <tr>
+              <td>Cost of frequent visits/follow-up</td>
+              <td><input type="radio" name="q6_cost" value="very_often" required></td>
+              <td><input type="radio" name="q6_cost" value="often"></td>
+              <td><input type="radio" name="q6_cost" value="sometimes"></td>
+              <td><input type="radio" name="q6_cost" value="not_often"></td>
+            </tr>
+            <tr>
+              <td>Recovery and downtime</td>
+              <td><input type="radio" name="q6_recovery" value="very_often" required></td>
+              <td><input type="radio" name="q6_recovery" value="often"></td>
+              <td><input type="radio" name="q6_recovery" value="sometimes"></td>
+              <td><input type="radio" name="q6_recovery" value="not_often"></td>
+            </tr>
+            <tr>
+              <td>Distrust of research/medical system</td>
+              <td><input type="radio" name="q6_distrust" value="very_often" required></td>
+              <td><input type="radio" name="q6_distrust" value="often"></td>
+              <td><input type="radio" name="q6_distrust" value="sometimes"></td>
+              <td><input type="radio" name="q6_distrust" value="not_often"></td>
+            </tr>
+          </tbody>
+        </table>
 
-      <!-- Q7 -->
-      <div class="section">
-        <h2>7) Translated Consent Forms</h2>
-        <label>Are informed consent forms available in languages other than English?</label>
-        <div class="choice-group" data-toggle="q7">
-          <label class="choice"><input type="radio" name="q7_translated" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q7_translated" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q7_no" class="followup hidden">
-          <label>If no, how are they obtained? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q7_obtained[]" value="translation_services" /> <span>Translation services</span></label>
-            <label class="choice"><input type="checkbox" name="q7_obtained[]" value="central_repository" /> <span>Central repository of translated forms</span></label>
-            <label class="choice"><input type="checkbox" name="q7_obtained[]" value="no_process" /> <span>No specific process</span></label>
-            <div>
-              <label for="q7_other">Other (please specify):</label>
-              <input id="q7_other" type="text" name="q7_other" />
+        <!-- 7) Misconceptions by Demographic Group -->
+        <h3 style="margin-top:18px">Misconceptions, Concerns, or Barriers by Demographic Group</h3>
+        <p>For each demographic group below, please select all misconceptions/barriers you have observed.</p>
+        <div class="grid">
+          <!-- helper function via markup repetition -->
+          <div class="col-6">
+            <label>Men</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_men[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q8 -->
-      <div class="section">
-        <h2>8) Diversity Programs</h2>
-        <label>Does your site have diversity programs to increase minority enrollment?</label>
-        <div class="choice-group" data-toggle="q8">
-          <label class="choice"><input type="radio" name="q8_programs" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q8_programs" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q8_yes" class="followup hidden">
-          <label>If yes, what types? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q8_types[]" value="community_education" /> <span>Community education/outreach events</span></label>
-            <label class="choice"><input type="checkbox" name="q8_types[]" value="local_partnerships" /> <span>Partnerships with local clinics/faith groups</span></label>
-            <label class="choice"><input type="checkbox" name="q8_types[]" value="scholarships_assistance" /> <span>Scholarships or patient assistance funds</span></label>
-            <label class="choice"><input type="checkbox" name="q8_types[]" value="targeted_campaigns" /> <span>Targeted recruitment campaigns</span></label>
-            <div>
-              <label for="q8_other">Other (please specify):</label>
-              <input id="q8_other" type="text" name="q8_other" />
+          <div class="col-6">
+            <label>Women</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_women[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q9 -->
-      <div class="section">
-        <h2>9) Tracking Diversity Metrics</h2>
-        <label>Does your site track enrollment diversity metrics during trials?</label>
-        <div class="choice-group" data-toggle="q9">
-          <label class="choice"><input type="radio" name="q9_track" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q9_track" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q9_yes" class="followup hidden">
-          <label>If yes, how are they tracked? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q9_how[]" value="manual_logs" /> <span>Manual logs/spreadsheets</span></label>
-            <label class="choice"><input type="checkbox" name="q9_how[]" value="dashboards" /> <span>Electronic dashboard reports</span></label>
-            <label class="choice"><input type="checkbox" name="q9_how[]" value="sponsor_systems" /> <span>Sponsor-provided systems</span></label>
-            <div>
-              <label for="q9_other">Other (please specify):</label>
-              <input id="q9_other" type="text" name="q9_other" />
+          <div class="col-6">
+            <label>Older patients (&gt;50 years old)</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_older[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q10 -->
-      <div class="section">
-        <h2>10) Inclusion/Exclusion Criteria Impact</h2>
-        <label>Have inclusion/exclusion criteria limited participation from certain groups?</label>
-        <div class="choice-group" data-toggle="q10">
-          <label class="choice"><input type="radio" name="q10_limited" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q10_limited" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q10_yes" class="followup hidden">
-          <label>If yes, which types of criteria? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q10_types[]" value="comorbidities" /> <span>Comorbidities (e.g., diabetes, hypertension)</span></label>
-            <label class="choice"><input type="checkbox" name="q10_types[]" value="imaging_requirements" /> <span>Imaging or diagnostic test requirements</span></label>
-            <label class="choice"><input type="checkbox" name="q10_types[]" value="insurance_requirements" /> <span>Insurance or financial coverage requirements</span></label>
-            <label class="choice"><input type="checkbox" name="q10_types[]" value="age_restrictions" /> <span>Age restrictions</span></label>
-            <div>
-              <label for="q10_other">Other (please specify):</label>
-              <input id="q10_other" type="text" name="q10_other" />
+          <div class="col-6">
+            <label>Younger patients (&lt;50 years old)</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_younger[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q11 -->
-      <div class="section">
-        <h2>11) Barriers for Underrepresented AFib Patients</h2>
-        <label>Which barriers most affect recruitment or retention of underrepresented AFib patients? <span class="help">(Select all that apply)</span></label>
-        <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="transportation" /> <span>Transportation</span></label>
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="caregiver_support" /> <span>Caregiver support</span></label>
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="visit_burden" /> <span>Visit frequency/trial burden</span></label>
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="language_barriers" /> <span>Language barriers</span></label>
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="cultural_factors" /> <span>Cultural factors</span></label>
-          <label class="choice"><input type="checkbox" name="q11_barriers[]" value="health_literacy" /> <span>Health literacy</span></label>
-          <div>
-            <label for="q11_other">Other (please specify):</label>
-            <input id="q11_other" type="text" name="q11_other" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Q12 -->
-      <div class="section">
-        <h2>12) Observed Differences by Demographics</h2>
-        <label>Have you observed differences in AFib diagnosis, referral, or trial participation by demographics?</label>
-        <div class="choice-group" data-toggle="q12">
-          <label class="choice"><input type="radio" name="q12_observed" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q12_observed" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q12_yes" class="followup hidden">
-          <label>If yes, which differences? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q12_diffs[]" value="age" /> <span>Age differences</span></label>
-            <label class="choice"><input type="checkbox" name="q12_diffs[]" value="racial_ethnic" /> <span>Racial/ethnic disparities</span></label>
-            <label class="choice"><input type="checkbox" name="q12_diffs[]" value="socioeconomic" /> <span>Socioeconomic disparities</span></label>
-            <label class="choice"><input type="checkbox" name="q12_diffs[]" value="insurance" /> <span>Insurance/coverage differences</span></label>
-            <div>
-              <label for="q12_other">Other (please specify):</label>
-              <input id="q12_other" type="text" name="q12_other" />
+          <div class="col-6">
+            <label>White</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_white[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q13 -->
-      <div class="section">
-        <h2>13) Patient Concerns</h2>
-        <label>What patient concerns are most often voiced about ablation trials? <span class="help">(Select all that apply)</span></label>
-        <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q13_concerns[]" value="procedure_risks" /> <span>Procedure risks</span></label>
-          <label class="choice"><input type="checkbox" name="q13_concerns[]" value="invasiveness" /> <span>Invasiveness</span></label>
-          <label class="choice"><input type="checkbox" name="q13_concerns[]" value="recovery_burden" /> <span>Recovery/follow-up burden</span></label>
-          <label class="choice"><input type="checkbox" name="q13_concerns[]" value="distrust" /> <span>Distrust of research/medical system</span></label>
-          <div>
-            <label for="q13_other">Other (please specify):</label>
-            <input id="q13_other" type="text" name="q13_other" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Q14 -->
-      <div class="section">
-        <h2>14) Misconceptions & Responses</h2>
-        <label>Have you identified misconceptions about AFib trials in specific communities?</label>
-        <div class="choice-group" data-toggle="q14">
-          <label class="choice"><input type="radio" name="q14_misconceptions" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q14_misconceptions" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q14_yes" class="followup hidden">
-          <label>If yes, how has your site addressed them? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q14_actions[]" value="educational_materials" /> <span>Educational materials</span></label>
-            <label class="choice"><input type="checkbox" name="q14_actions[]" value="community_talks" /> <span>Community health talks</span></label>
-            <label class="choice"><input type="checkbox" name="q14_actions[]" value="local_leaders" /> <span>Partnerships with local leaders</span></label>
-            <label class="choice"><input type="checkbox" name="q14_actions[]" value="one_on_one" /> <span>One-on-one counseling</span></label>
-            <div>
-              <label for="q14_other">Other (please specify):</label>
-              <input id="q14_other" type="text" name="q14_other" />
+          <div class="col-6">
+            <label>African American</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_afam[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-
-          <!-- Misconceptions by Demographic Group (conditional) -->
-          <div id="q14_misconceptions_details" class="followup">
-            <h3>Misconceptions, Concerns, or Barriers by Demographic Group</h3>
-            <p>Please select and describe any specific misconceptions, concerns, or barriers you have encountered from participants in the following groups at your site:</p>
-            <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th>Demographic Group</th>
-                  <th>Common Misconceptions/Barriers</th>
-                  <th>Details (optional)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>White</td>
-                  <td>
-                    <select name="misconceptions[white]">
-                      <option value="">-- Select --</option>
-                      <option value="mistrust">Mistrust of research/medical system</option>
-                      <option value="language">Language/communication barriers</option>
-                      <option value="access">Access/transportation issues</option>
-                      <option value="none">No major barriers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </td>
-                  <td><input type="text" name="misconceptions[white_details]" placeholder="Add details if needed" style="width:95%;" /></td>
-                </tr>
-                <tr>
-                  <td>African American</td>
-                  <td>
-                    <select name="misconceptions[african_american]">
-                      <option value="">-- Select --</option>
-                      <option value="mistrust">Mistrust of research/medical system</option>
-                      <option value="language">Language/communication barriers</option>
-                      <option value="access">Access/transportation issues</option>
-                      <option value="historical">Historical abuses (e.g., Tuskegee)</option>
-                      <option value="none">No major barriers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </td>
-                  <td><input type="text" name="misconceptions[african_american_details]" placeholder="Add details if needed" style="width:95%;" /></td>
-                </tr>
-                <tr>
-                  <td>Asian</td>
-                  <td>
-                    <select name="misconceptions[asian]">
-                      <option value="">-- Select --</option>
-                      <option value="mistrust">Mistrust of research/medical system</option>
-                      <option value="language">Language/communication barriers</option>
-                      <option value="cultural">Cultural beliefs/traditions</option>
-                      <option value="access">Access/transportation issues</option>
-                      <option value="none">No major barriers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </td>
-                  <td><input type="text" name="misconceptions[asian_details]" placeholder="Add details if needed" style="width:95%;" /></td>
-                </tr>
-                <tr>
-                  <td>Hispanic</td>
-                  <td>
-                    <select name="misconceptions[hispanic]">
-                      <option value="">-- Select --</option>
-                      <option value="mistrust">Mistrust of research/medical system</option>
-                      <option value="language">Language/communication barriers</option>
-                      <option value="cultural">Cultural beliefs/traditions</option>
-                      <option value="immigration">Immigration/documentation concerns</option>
-                      <option value="access">Access/transportation issues</option>
-                      <option value="none">No major barriers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </td>
-                  <td><input type="text" name="misconceptions[hispanic_details]" placeholder="Add details if needed" style="width:95%;" /></td>
-                </tr>
-                <tr>
-                  <td>Other (specify)</td>
-                  <td>
-                    <select name="misconceptions[other]">
-                      <option value="">-- Select --</option>
-                      <option value="mistrust">Mistrust of research/medical system</option>
-                      <option value="language">Language/communication barriers</option>
-                      <option value="cultural">Cultural beliefs/traditions</option>
-                      <option value="access">Access/transportation issues</option>
-                      <option value="none">No major barriers</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </td>
-                  <td><input type="text" name="misconceptions[other_details]" placeholder="Add details if needed or specify group" style="width:95%;" /></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Q15 -->
-      <div class="section">
-        <h2>15) Enrollment Targets vs Diversity Goals</h2>
-        <label>Have enrollment targets ever conflicted with diversity goals?</label>
-        <div class="choice-group" data-toggle="q15">
-          <label class="choice"><input type="radio" name="q15_conflict" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q15_conflict" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q15_yes" class="followup hidden">
-          <label>If yes, how? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q15_how[]" value="tight_timelines" /> <span>Tight timelines</span></label>
-            <label class="choice"><input type="checkbox" name="q15_how[]" value="limited_pool" /> <span>Limited eligible patient pool</span></label>
-            <label class="choice"><input type="checkbox" name="q15_how[]" value="sponsor_pressure" /> <span>Sponsor pressure for rapid enrollment</span></label>
-            <label class="choice"><input type="checkbox" name="q15_how[]" value="narrow_protocol" /> <span>Narrow protocol criteria</span></label>
-            <div>
-              <label for="q15_other">Other (please specify):</label>
-              <input id="q15_other" type="text" name="q15_other" />
+          <div class="col-6">
+            <label>Asian</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_asian[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Q16 -->
-      <div class="section">
-        <h2>16) Strategies That Worked</h2>
-        <label>Have you seen strategies that improved recruitment or retention in AFib trials?</label>
-        <div class="choice-group" data-toggle="q16">
-          <label class="choice"><input type="radio" name="q16_strategies" value="yes" required /> <span>Yes</span></label>
-          <label class="choice"><input type="radio" name="q16_strategies" value="no" /> <span>No</span></label>
-        </div>
-
-        <div id="q16_yes" class="followup hidden">
-          <label>If yes, which strategies? <span class="help">(Select all that apply)</span></label>
-          <div class="choice-group">
-            <label class="choice"><input type="checkbox" name="q16_which[]" value="transport_support" /> <span>Transportation support</span></label>
-            <label class="choice"><input type="checkbox" name="q16_which[]" value="community_partnerships" /> <span>Community partnerships</span></label>
-            <label class="choice"><input type="checkbox" name="q16_which[]" value="simplified_consent" /> <span>Simplified consent process</span></label>
-            <label class="choice"><input type="checkbox" name="q16_which[]" value="education_efforts" /> <span>Increased patient education efforts</span></label>
-            <div>
-              <label for="q16_other">Other (please specify):</label>
-              <input id="q16_other" type="text" name="q16_other" />
+          <div class="col-6">
+            <label>Hispanic</label>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="mistrust"> <span>Lack of trust in medical system/research</span></label>
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="language"> <span>Language/communication barriers</span></label>
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="transport"> <span>Transportation/access issues</span></label>
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="info"> <span>Lack of information about AF clinical trials</span></label>
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="cultural"> <span>Cultural/religious differences</span></label>
+              <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="none"> <span>No barriers</span></label>
             </div>
           </div>
-        </div>
-      </div>
+<!-- Free Response Full Width -->
+<div class="col-12" style="margin-top:18px">
+  <h4 style="color:#D71600; margin-bottom:8px;">Additional Barriers</h4>
+  <label for="q7_open">
+    In your own words, what are the most voiced barriers to enrollment that you’ve observed? 
+    Please include any groups or barriers not mentioned above.
+  </label>
+  <textarea id="q7_open" name="q7_open" placeholder="Your response..." style="width:100%; min-height:100px;"></textarea>
+</div>
+</div>
 
-      <!-- Q17 -->
-      <div class="section">
-        <h2>17) Final Thoughts</h2>
-        <label for="q17_extra">Is there anything else you’d like to share about enhancing representation in AFib trials?</label>
-        <textarea id="q17_extra" name="q17_extra" placeholder="Your comments…"></textarea>
-      </div>
+<!-- Final Reflections -->
+<div style="margin-top:24px; margin-left:0; padding-left:0;">
+  <h2>Final Reflections</h2>
 
-      <div class="actions">
-        <button type="submit" class="btn-primary">Submit Survey</button>
-        <button type="reset" class="btn-muted">Reset</button>
-      </div>
-    </form>
+
+  <!-- 9) What Do You Think Would Help Improve Representation/Participation in Clinical Trials the Most for All Patients? -->
+  <h3>What Do You Think Would Help Improve Representation/Participation in Clinical Trials the Most for All Patients?</h3>
+  <label>Select all that apply:</label>
+  <div class="choice-group">
+    <label class="choice"><input type="checkbox" name="q9_help[]" value="more_trial_rep_involvement" /> <span>More direct involvement with clinical trial representatives</span></label>
+    <label class="choice"><input type="checkbox" name="q9_help[]" value="targeted_outreach" /> <span>Outreach efforts to specific patient populations</span></label>
+    <label class="choice"><input type="checkbox" name="q9_help[]" value="shared_decision_making" /> <span>More one-on-one patient–physician shared decision-making</span></label>
+    <label class="choice"><input type="checkbox" name="q9_help[]" value="education_campaigns" /> <span>Increased patient education and awareness campaigns about AF and ablation</span></label>
+    <label class="choice"><input type="checkbox" name="q9_help[]" value="simplified_requirements" /> <span>Simplified trial requirements to reduce patient burden</span></label>
   </div>
+</div>
+
 
 <script>
-  // Simple conditional reveal logic
+  // Conditional reveal map
   const map = [
-    { name: 'q1_measured', showOn: 'yes', target: 'q1_yes' },
-    { name: 'q3_plan', showOn: 'yes', target: 'q3_yes' },
-    { name: 'q4_change', showOn: 'yes', target: 'q4_yes' },
-    { name: 'q7_translated', showOn: 'no',  target: 'q7_no'  },
-    { name: 'q8_programs', showOn: 'yes', target: 'q8_yes' },
-    { name: 'q9_track', showOn: 'yes', target: 'q9_yes' },
-    { name: 'q10_limited', showOn: 'yes', target: 'q10_yes' },
-    { name: 'q12_observed', showOn: 'yes', target: 'q12_yes' },
-    { name: 'q14_misconceptions', showOn: 'yes', target: 'q14_yes' },
-    { name: 'q15_conflict', showOn: 'yes', target: 'q15_yes' },
-    { name: 'q16_strategies', showOn: 'yes', target: 'q16_yes' },
+    { name: 'q_lang_serve', showOn: 'yes', target: 'q_lang_yes' },
   ];
 
   function updateVisibility() {
@@ -659,7 +461,7 @@
       const form = ev.target;
       if (!form.checkValidity()) {
         ev.preventDefault();
-        alert('Please complete required fields (First Name, Last Name, Email, Site Name, Site Address) and any required yes/no items.');
+        alert('Please complete required fields (First Name, Last Name, Email, Site Name, Site Address) and required items.');
         return;
       }
       // Show thank you message after successful submission
@@ -683,4 +485,3 @@
 </script>
 </body>
 </html>
-
