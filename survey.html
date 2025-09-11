@@ -166,17 +166,108 @@
         <label for="siteState">Please select the state that your clinical site is located in</label>
         <select id="siteState" name="site_state">
           <option value="">-- Select a state --</option>
-          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
-          <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
-          <option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
-          <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option>
-          <option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
-          <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option>
-          <option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option>
-          <option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option>
-          <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
-          <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+          <option>AL</option>
+          <option>AK</option>
+          <option>AZ</option>
+          <option>AR</option>
+          <option>CA</option>
+          <option>CO</option>
+          <option>CT</option>
+          <option>DE</option>
+          <option>DC</option>
+          <option>FL</option>
+          <option>GA</option>
+          <option>HI</option>
+          <option>ID</option>
+          <option>IL</option>
+          <option>IN</option>
+          <option>IA</option>
+          <option>KS</option>
+          <option>KY</option>
+          <option>LA</option>
+          <option>ME</option>
+          <option>MD</option>
+          <option>MA</option>
+          <option>MI</option>
+          <option>MN</option>
+          <option>MS</option>
+          <option>MO</option>
+          <option>MT</option>
+          <option>NE</option>
+          <option>NV</option>
+          <option>NH</option>
+          <option>NJ</option>
+          <option>NM</option>
+          <option>NY</option>
+          <option>NC</option>
+          <option>ND</option>
+          <option>OH</option>
+          <option>OK</option>
+          <option>OR</option>
+          <option>PA</option>
+          <option>RI</option>
+          <option>SC</option>
+          <option>SD</option>
+          <option>TN</option>
+          <option>TX</option>
+          <option>UT</option>
+          <option>VT</option>
+          <option>VA</option>
+          <option>WA</option>
+          <option>WV</option>
+          <option>WI</option>
+          <option>WY</option>
         </select>
+      </div>
+
+      <!-- About Your Institution -->
+      <div class="section">
+        <h2>About Your Institution</h2>
+        <label>Which best describes your institution?</label>
+        <div>
+          <input type="radio" id="academic" name="institution" value="Academic Medical Center">
+          <label for="academic">Academic Medical Center</label>
+        </div>
+        <div>
+          <input type="radio" id="community" name="institution" value="Community Hospital">
+          <label for="community">Community Hospital</label>
+        </div>
+        <div>
+          <input type="radio" id="privatePractice" name="institution" value="Private Practice">
+          <label for="privatePractice">Private Practice</label>
+        </div>
+        <div>
+          <input type="radio" id="researchSite" name="institution" value="Dedicated Research Site (CRO)">
+          <label for="researchSite">Dedicated Research Site (CRO)</label>
+        </div>
+        <div>
+          <input type="radio" id="otherInstitution" name="institution" value="Other">
+          <label for="otherInstitution">Other (please specify):</label>
+          <input type="text" name="institution_other">
+        </div>
+      </div>
+
+      <!-- Institution Location -->
+      <div class="section">
+        <h2>Institution Location</h2>
+        <label>Which of the following best describes the location of your institution?</label>
+        <div>
+          <input type="radio" id="urban" name="location" value="Urban">
+          <label for="urban">Urban</label>
+        </div>
+        <div>
+          <input type="radio" id="suburban" name="location" value="Suburban">
+          <label for="suburban">Suburban</label>
+        </div>
+        <div>
+          <input type="radio" id="rural" name="location" value="Rural">
+          <label for="rural">Rural</label>
+        </div>
+        <div>
+          <input type="radio" id="otherLocation" name="location" value="Other">
+          <label for="otherLocation">Other (please specify):</label>
+          <input type="text" name="location_other">
+        </div>
       </div>
 
       <!-- Patient Population & Demographics -->
