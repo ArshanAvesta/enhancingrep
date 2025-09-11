@@ -204,7 +204,7 @@
     <div class="wrap">
       <div class="header">
         <h1>Understanding Barriers to Clinical Trial Participation</h1>
-        <p>Thank you for participating in this survey. Our goal is to understand the barriers to enrolling diverse patient populations—considering race, ethnicity, gender, and age—in catheter ablation clinical trials for AFib patients. Your insights are essential in helping us develop actionable strategies to improve trial enrollment diversity, ensuring that participation accurately reflects the treated population. This survey should take approximately 10-15 minutes to complete.<br /><br />
+        <p>Thank you for participating in this survey. Our goal is to understand the barriers to enrolling diverse patient populations, considering race, ethnicity, gender, and age in catheter ablation clinical trials for AFib patients. Your insights are essential in helping us develop actionable strategies to improve trial enrollment diversity, ensuring that participation accurately reflects the treated population. This survey should take approximately 10-15 minutes to complete.<br /><br />
           <strong>Your responses will be aggregated and anonymized for analysis. The results will not be shared outside of the research team.</strong>
         </p>
       </div>
@@ -300,7 +300,7 @@
           </select>
         </div>
         <div class="section">
-          <label>Which best describes your clinical site/institution?</label>
+          <label>Which of the following best describes your clinical site/institution?</label>
           <div class="choice-group">
             <label class="choice">
               <input type="radio" name="institution" value="Academic Medical Center" />
@@ -355,8 +355,7 @@
             </label>
           </div>
           <div id="q_lang_yes" class="followup hidden">
-            <h3 style="margin: 0 0 10px;">2) Support for Non-English-Speaking Patients</h3>
-            <label>If yes, what resources are available? <span class="help">(Select all that apply)</span></label>
+            <h3 style="margin: 0 0 10px;">What support/resources are available for your Non-English-speaking patients?</h3> <span class="help">(Select all that apply)</span></label>
             <div class="choice-group">
               <label class="choice">
                 <input type="checkbox" name="q_lang_support[]" value="bilingual_staff" />
@@ -392,7 +391,7 @@
         <!-- Patient Population & Demographics -->
         <div class="section">
           <h2>AFib Patient Population &amp; Demographics</h2>
-          <label>Please describe your site’s typical patient population. <span class="help">(Select all that apply)</span></label>
+          <label>Please describe your clinical site’s typical AFib patient population. <span class="help">(Select all that apply)</span></label>
           <div class="choice-group">
             <label class="choice">
               <input type="checkbox" name="q3_population[]" value="specific_race_ethnicity" />
@@ -425,7 +424,7 @@
           </div>
         </div>
         <div class="section">
-          <label>Which of the following best describes the AFib patient population your site serves? <span class="help">(Select all that apply)</span></label>
+          <label>Which region best describes the patient population with AFib that your site serves? <span class="help">(Select all that apply)</span></label>
           <div class="choice-group">
             <label class="choice">
               <input type="checkbox" name="q_afibpop_location[]" value="Urban" />
@@ -548,7 +547,8 @@
         <div class="section">
           <!-- 6) Patient Concerns (matrix) -->
           <h3>Patient Concerns</h3>
-          <label>How often do patients at your site express the following concerns about AFib ablation trials?</label>
+            <label>How often do patients at your site express the following concerns about AFib ablation trials? <span class="help"> (Select all that apply) </span></label>
+
           <table class="matrix" aria-label="Patient Concerns Matrix">
             <thead>
               <tr>
@@ -643,239 +643,111 @@
         <!-- 7) Misconceptions by Demographic Group -->
         <div class="section">
           <h3>Misconceptions, Concerns, or Barriers by Demographic Group</h3>
-          <p>For each demographic group below, please select all misconceptions/barriers you have observed.</p>
+          <p>For each demographic group below, please select all misconceptions/barriers you have observed. <span class="help"> (Select all that apply) </span></label>
           <div class="grid">
             <!-- helper function via markup repetition -->
             <div class="col-6">
               <label>Men</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_men[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_men[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>Women</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_women[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_women[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>Older patients (&gt;50 years old)</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_older[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_older[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>Younger patients (&lt;50 years old)</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_younger[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_younger[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>White</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_white[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_white[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>African American</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_afam[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_afam[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>Asian</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_asian[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_asian[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <div class="col-6">
               <label>Hispanic</label>
               <div class="choice-group">
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="mistrust">
-                  <span>Lack of trust in medical system/research</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="language">
-                  <span>Language/communication barriers</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="transport">
-                  <span>Transportation/access issues</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="info">
-                  <span>Lack of information about AF clinical trials</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="cultural">
-                  <span>Cultural/religious differences</span>
-                </label>
-                <label class="choice">
-                  <input type="checkbox" name="q7_hispanic[]" value="none">
-                  <span>No barriers</span>
-                </label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="cultural"> <span>Cultural or religious factors</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="fear_side_effects"> <span>Fear of side effects or placebo</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="transportation"> <span>Transportation challenges</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="lack_awareness"> <span>Lack of awareness or understanding of clinical trials</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="mistrust"> <span>Mistrust of the medical research system</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="time_constraints"> <span>Time constraints or inability to take time off work</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="childcare_support"> <span>Lack of childcare or eldercare support</span></label>
+                <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
             <!-- Free Response Full Width -->
@@ -894,7 +766,7 @@
               <div style="margin-top:24px; margin-left:0; padding-left:0;">
                 <h2>Strategies and Final Thoughts</h2>
                 <!-- Strategy to Improve Enrollment Diversity -->
-                <label>In your opinion, what strategy or resource would be the MOST successful in improving enrollment diversity at your site?</label>
+                <label>In your opinion, what strategy or resource would be the MOST successful in improving enrollment diversity at your site? <span class="help"> (Select all that apply) </span></label>
                 <div class="choice-group">
                   <label class="choice">
                     <input type="checkbox" name="q9_help[]" value="more_trial_rep_involvement" />
