@@ -218,57 +218,25 @@
           <option>WI</option>
           <option>WY</option>
         </select>
-      </div>
-
-      <!-- About Your Institution -->
-      <div class="section">
-        <h2>About Your Institution</h2>
+        <hr style="margin: 24px 0; border: none; border-top: 2px solid #eee;" />
         <label>Which best describes your institution?</label>
-        <div>
-          <input type="radio" id="academic" name="institution" value="Academic Medical Center">
-          <label for="academic">Academic Medical Center</label>
+        <div class="choice-group">
+          <label class="choice"><input type="radio" name="institution" value="Academic Medical Center"> <span>Academic Medical Center</span></label>
+          <label class="choice"><input type="radio" name="institution" value="Community Hospital"> <span>Community Hospital</span></label>
+          <label class="choice"><input type="radio" name="institution" value="Private Practice"> <span>Private Practice</span></label>
+          <label class="choice"><input type="radio" name="institution" value="Dedicated Research Site (CRO)"> <span>Dedicated Research Site (CRO)</span></label>
+          <label class="choice"><input type="radio" name="institution" value="Other"> <span>Other (please specify):</span> <input type="text" name="institution_other" style="margin-left:8px;max-width:200px;display:inline-block;" /></label>
         </div>
-        <div>
-          <input type="radio" id="community" name="institution" value="Community Hospital">
-          <label for="community">Community Hospital</label>
-        </div>
-        <div>
-          <input type="radio" id="privatePractice" name="institution" value="Private Practice">
-          <label for="privatePractice">Private Practice</label>
-        </div>
-        <div>
-          <input type="radio" id="researchSite" name="institution" value="Dedicated Research Site (CRO)">
-          <label for="researchSite">Dedicated Research Site (CRO)</label>
-        </div>
-        <div>
-          <input type="radio" id="otherInstitution" name="institution" value="Other">
-          <label for="otherInstitution">Other (please specify):</label>
-          <input type="text" name="institution_other">
+        <hr style="margin: 24px 0; border: none; border-top: 2px solid #eee;" />
+        <label>Which of the following best describes the location of your institution?</label>
+        <div class="choice-group">
+          <label class="choice"><input type="radio" name="location" value="Urban"> <span>Urban</span></label>
+          <label class="choice"><input type="radio" name="location" value="Suburban"> <span>Suburban</span></label>
+          <label class="choice"><input type="radio" name="location" value="Rural"> <span>Rural</span></label>
+          <label class="choice"><input type="radio" name="location" value="Other"> <span>Other (please specify):</span> <input type="text" name="location_other" style="margin-left:8px;max-width:200px;display:inline-block;" /></label>
         </div>
       </div>
 
-      <!-- Institution Location -->
-      <div class="section">
-        <h2>Institution Location</h2>
-        <label>Which of the following best describes the location of your institution?</label>
-        <div>
-          <input type="radio" id="urban" name="location" value="Urban">
-          <label for="urban">Urban</label>
-        </div>
-        <div>
-          <input type="radio" id="suburban" name="location" value="Suburban">
-          <label for="suburban">Suburban</label>
-        </div>
-        <div>
-          <input type="radio" id="rural" name="location" value="Rural">
-          <label for="rural">Rural</label>
-        </div>
-        <div>
-          <input type="radio" id="otherLocation" name="location" value="Other">
-          <label for="otherLocation">Other (please specify):</label>
-          <input type="text" name="location_other">
-        </div>
-      </div>
 
       <!-- Patient Population & Demographics -->
       <div class="section">
