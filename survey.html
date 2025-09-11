@@ -83,6 +83,21 @@
       .col-6 {
         grid-column: span 6;
       }
+
+      /* Card style for demographic misconception groups */
+      .misconception-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.07);
+        border: 1px solid rgba(0,0,0,0.10);
+        margin-bottom: 12px;
+        padding: 18px 16px 10px 16px;
+        transition: box-shadow 0.18s;
+      }
+      .misconception-card:hover {
+        box-shadow: 0 8px 28px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.09);
+        border-color: var(--brand);
+      }
       .col-12 {
         grid-column: span 12;
       }
@@ -659,7 +674,7 @@
           <p>For each demographic group below, please select all misconceptions/barriers you have observed. <span class="help"> (Select all that apply) </span></label>
           <div class="grid">
             <!-- helper function via markup repetition -->
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Men</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_men[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -672,7 +687,7 @@
                 <label class="choice"><input type="checkbox" name="q7_men[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Women</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_women[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -685,7 +700,7 @@
                 <label class="choice"><input type="checkbox" name="q7_women[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Older patients (&gt;50 years old)</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_older[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -698,7 +713,7 @@
                 <label class="choice"><input type="checkbox" name="q7_older[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Younger patients (&lt;50 years old)</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_younger[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -711,7 +726,7 @@
                 <label class="choice"><input type="checkbox" name="q7_younger[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>White</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_white[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -724,7 +739,7 @@
                 <label class="choice"><input type="checkbox" name="q7_white[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>African American</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_afam[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -737,7 +752,7 @@
                 <label class="choice"><input type="checkbox" name="q7_afam[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Asian</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_asian[]" value="cultural"> <span>Cultural or religious factors</span></label>
@@ -750,7 +765,7 @@
                 <label class="choice"><input type="checkbox" name="q7_asian[]" value="language"> <span>Language or communication barriers</span></label>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 misconception-card">
               <label>Hispanic</label>
               <div class="choice-group">
                 <label class="choice"><input type="checkbox" name="q7_hispanic[]" value="cultural"> <span>Cultural or religious factors</span></label>
