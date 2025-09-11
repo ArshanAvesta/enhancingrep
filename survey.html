@@ -130,6 +130,16 @@
 
       <!-- Contact & Site Information -->
       <div class="section">
+      <div class="section">
+        <label>Which of the following best describes the AFib patient population your site serves? <span class="help">(Select all that apply)</span></label>
+        <div class="choice-group">
+          <label class="choice"><input type="checkbox" name="q_afibpop_location[]" value="Urban" /> <span>Urban</span></label>
+          <label class="choice"><input type="checkbox" name="q_afibpop_location[]" value="Suburban" /> <span>Suburban</span></label>
+          <label class="choice"><input type="checkbox" name="q_afibpop_location[]" value="Rural" /> <span>Rural</span></label>
+        </div>
+        <label for="q_afibpop_location_other">Other (please specify):</label>
+        <input id="q_afibpop_location_other" type="text" name="q_afibpop_location_other" />
+      </div>
         <h2>Contact & Site Information</h2>
         <div class="grid">
           <div class="col-6">
@@ -265,9 +275,9 @@
   </div>
 </div>
 
-      <!-- Patient Population & Demographics -->
+      <!-- AF Patient Population & Demographics -->
       <div class="section">
-        <h2>Patient Population & Demographics</h2>
+        <h2>AFib Patient Population & Demographics</h2>
         <label>Please describe your site’s typical patient population. <span class="help">(Select all that apply)</span></label>
         <div class="choice-group">
           <label class="choice"><input type="checkbox" name="q3_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity</span></label>
