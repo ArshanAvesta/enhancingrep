@@ -238,96 +238,66 @@
       </div>
       <form id="siteSurvey" action="https://formspree.io/f/myzdlrrj" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New Clinical Site Survey" />
-        <!-- Contact & Site Information -->
-        <div class="section">
-          <h2>Contact &amp; Site Information</h2>
-          <div class="grid">
-            <div class="col-6">
-              <label for="firstName">First Name of Contact Person<span class="req">*</span></label>
-              <input id="firstName" name="first_name" type="text" required />
-            </div>
-            <div class="col-6">
-              <label for="lastName">Last Name of Contact Person<span class="req">*</span></label>
-              <input id="lastName" name="last_name" type="text" required />
-            </div>
-            <div class="col-6">
-              <label for="email">Contact Email Address<span class="req">*</span></label>
-              <input id="email" name="email" type="email" inputmode="email" placeholder="name@organization.org" required />
-            </div>
-            <div class="col-6">
-              <label for="siteName">Name of Clinical Site or Institution<span class="req">*</span></label>
-              <input id="siteName" name="site_name" type="text" required />
-            </div>
-            <div class="col-12">
-              <label for="siteAddress">Clinical Site Address<span class="req">*</span></label>
-              <input id="siteAddress" name="site_address" type="text" inputmode="address" placeholder="123 Business St, Suite 456, City, State, ZIP" required />
-            </div>
-            <div class="col-12">
-              <label for="siteNumber">Clinical Site Number <span class="help">(e.g., MDEV-0000)</span></label>
-              <input id="siteNumber" name="site_number" type="text" placeholder="MDEV-0000" />
-            </div>
-          </div>
-        </div>
+     <!-- Contact & Site Information -->
+<div class="section">
+  <h2>Contact &amp; Site Information</h2>
+  <div class="grid">
+    <div class="col-6">
+      <label for="firstName">First Name of Contact Person<span class="req">*</span></label>
+      <input id="firstName" name="first_name" type="text" required />
+    </div>
+    <div class="col-6">
+      <label for="lastName">Last Name of Contact Person<span class="req">*</span></label>
+      <input id="lastName" name="last_name" type="text" required />
+    </div>
+    <div class="col-6">
+      <label for="email">Contact Email Address<span class="req">*</span></label>
+      <input id="email" name="email" type="email" inputmode="email" placeholder="name@organization.org" required />
+    </div>
+    <div class="col-6">
+      <label for="siteName">Name of Clinical Site or Institution<span class="req">*</span></label>
+      <input id="siteName" name="site_name" type="text" required />
+    </div>
+
+<!-- Address, Zip, State on one line -->
+<div class="col-6">
+  <label for="siteAddress">Clinical Site/Institution Address<span class="req">*</span></label>
+  <input id="siteAddress" name="site_address" type="text" inputmode="text" placeholder="123 Business St, Suite 456" required />
+</div>
+<div class="col-6">
+  <div class="grid">
+    <div class="col-6">
+      <label for="siteZip">Zip Code<span class="req">*</span></label>
+      <input id="siteZip" name="site_zip" type="text" inputmode="numeric" placeholder="ZIP" required style="width:100%;" />
+    </div>
+    <div class="col-6">
+      <label for="siteState">State<span class="req">*</span></label>
+      <select id="siteState" name="site_state" required style="width:100%;">
+        <option value="">-- Select a state --</option>
+        <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
+        <option>CO</option><option>CT</option><option>DE</option><option>DC</option><option>FL</option>
+        <option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option>
+        <option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option>
+        <option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+        <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option>
+        <option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option>
+        <option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option>
+        <option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+        <option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+    <div class="col-12">
+      <label for="siteNumber">Clinical Site Number <span class="help">(e.g., MDEV-0000)</span></label>
+      <input id="siteNumber" name="site_number" type="text" placeholder="MDEV-0000" />
+    </div>
+  </div>
+</div>
         <!-- About Your Clinical Site -->
         <div class="section">
           <h2>About Your Clinical Site</h2>
-          <label for="siteState">Please select the state that your clinical site is located in</label>
-          <select id="siteState" name="site_state">
-            <option value="">-- Select a state --</option>
-            <option>AL</option>
-            <option>AK</option>
-            <option>AZ</option>
-            <option>AR</option>
-            <option>CA</option>
-            <option>CO</option>
-            <option>CT</option>
-            <option>DE</option>
-            <option>DC</option>
-            <option>FL</option>
-            <option>GA</option>
-            <option>HI</option>
-            <option>ID</option>
-            <option>IL</option>
-            <option>IN</option>
-            <option>IA</option>
-            <option>KS</option>
-            <option>KY</option>
-            <option>LA</option>
-            <option>ME</option>
-            <option>MD</option>
-            <option>MA</option>
-            <option>MI</option>
-            <option>MN</option>
-            <option>MS</option>
-            <option>MO</option>
-            <option>MT</option>
-            <option>NE</option>
-            <option>NV</option>
-            <option>NH</option>
-            <option>NJ</option>
-            <option>NM</option>
-            <option>NY</option>
-            <option>NC</option>
-            <option>ND</option>
-            <option>OH</option>
-            <option>OK</option>
-            <option>OR</option>
-            <option>PA</option>
-            <option>RI</option>
-            <option>SC</option>
-            <option>SD</option>
-            <option>TN</option>
-            <option>TX</option>
-            <option>UT</option>
-            <option>VT</option>
-            <option>VA</option>
-            <option>WA</option>
-            <option>WV</option>
-            <option>WI</option>
-            <option>WY</option>
-          </select>
-        </div>
-        <div class="section">
           <label>Which of the following best describes your clinical site/institution?</label>
           <div class="choice-group">
             <label class="choice">
@@ -889,4 +859,5 @@
       });
     </script>
   </body>
+
 </html>
