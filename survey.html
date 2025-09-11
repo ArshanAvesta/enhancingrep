@@ -130,7 +130,9 @@
 
       <!-- Contact & Site Information -->
       <div class="section">
+      <!-- AFib Patient Population & Demographics -->
       <div class="section">
+        <h2>AFib Patient Population & Demographics</h2>
         <label>Which of the following best describes the AFib patient population your site serves? <span class="help">(Select all that apply)</span></label>
         <div class="choice-group">
           <label class="choice"><input type="checkbox" name="q_afibpop_location[]" value="Urban" /> <span>Urban</span></label>
@@ -139,6 +141,20 @@
         </div>
         <label for="q_afibpop_location_other">Other (please specify):</label>
         <input id="q_afibpop_location_other" type="text" name="q_afibpop_location_other" />
+
+        <label style="margin-top:18px;display:block;">Please describe your site’s typical patient population. <span class="help">(Select all that apply)</span></label>
+        <div class="choice-group">
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="diverse_multiple_groups" /> <span>Diverse with multiple racial and ethnic groups</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_men" /> <span>Mostly men</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_women" /> <span>Mostly women</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_older" /> <span>Mostly older patients (&gt;50 years old)</span></label>
+          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_younger" /> <span>Mostly younger patients (&lt;50 years old)</span></label>
+          <div>
+            <label for="q3_other">Other (please specify):</label>
+            <input id="q3_other" type="text" name="q3_other" />
+          </div>
+        </div>
       </div>
         <h2>Contact & Site Information</h2>
         <div class="grid">
