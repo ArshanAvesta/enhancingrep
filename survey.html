@@ -240,20 +240,24 @@
 
 
       <!-- Patient Population & Demographics -->
+      <!-- AFib Patient Population & Demographics -->
       <div class="section">
-        <h2>Patient Population & Demographics</h2>
+        <h2>AFib Patient Population & Demographics</h2>
+        <!-- Question 1 -->
+        <label>Which of the following best describes the AFib patient population your site serves? <span class="help">(Select all that apply)</span></label>
+        <div class="choice-group">
+          <label class="choice"><input type="checkbox" name="afib_population[]" value="urban" /> <span>Urban</span></label>
+          <label class="choice"><input type="checkbox" name="afib_population[]" value="suburban" /> <span>Suburban</span></label>
+          <label class="choice"><input type="checkbox" name="afib_population[]" value="rural" /> <span>Rural</span></label>
+          <label class="choice"><input type="checkbox" name="afib_population[]" value="other" /> <span>Other (please specify):</span></label>
+          <input type="text" name="afib_population_other" placeholder="Specify other location" style="margin-left:8px;max-width:320px;display:inline-block;" />
+        </div>
+        <!-- Question 2 -->
         <label>Please describe your site’s typical patient population. <span class="help">(Select all that apply)</span></label>
         <div class="choice-group">
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity</span></label>
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="diverse_multiple_groups" /> <span>Diverse with multiple racial and ethnic groups</span></label>
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_men" /> <span>Mostly men</span></label>
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_women" /> <span>Mostly women</span></label>
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_older" /> <span>Mostly older patients (&gt;50 years old)</span></label>
-          <label class="choice"><input type="checkbox" name="q3_population[]" value="mostly_younger" /> <span>Mostly younger patients (&lt;50 years old)</span></label>
-          <div>
-            <label for="q3_other">Other (please specify):</label>
-            <input id="q3_other" type="text" name="q3_other" />
-          </div>
+          <label class="choice"><input type="checkbox" name="afib_typical_population[]" value="specific_race_ethnicity" /> <span>Predominantly of a specific race or ethnicity (e.g., non-Hispanic White &gt;80%)</span></label>
+          <label class="choice"><input type="checkbox" name="afib_typical_population[]" value="mostly_men" /> <span>Mostly men (e.g., male &gt;70%)</span></label>
+          <label class="choice"><input type="checkbox" name="afib_typical_population[]" value="mostly_women" /> <span>Mostly women (e.g., female &gt;70%)</span></label>
         </div>
       </div>
 
